@@ -21,7 +21,7 @@ function S3Request(service) {
 
   this.date = new Date();
   this.serviceName = 's3';
-  this.region = 'us-east-1';
+  this.region = service.options || 'us-east-1'; // use the region passed as an option or defaults to us-east-1
   this.expiresHeader = 'presigned-expires';
   this.extQueryString = '';
 }
